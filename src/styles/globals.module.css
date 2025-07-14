@@ -1,0 +1,182 @@
+/* ===== FLOATING ANIMATIONS ===== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatFast {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* ===== DRIFT ANIMATIONS ===== */
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(10px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(-5px) translateY(-20px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(-10px);
+  }
+}
+
+/* ===== ROTATION ANIMATIONS ===== */
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== FLOATING PARTICLE CLASSES ===== */
+.float1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float2 {
+  animation: floatSlow 4s ease-in-out infinite 1s;
+}
+
+.float3 {
+  animation: floatFast 2.5s ease-in-out infinite 2s;
+}
+
+.float4 {
+  animation: float 3.5s ease-in-out infinite 0.5s;
+}
+
+.float5 {
+  animation: floatSlow 4.5s ease-in-out infinite 1.5s;
+}
+
+.float6 {
+  animation: floatFast 3.2s ease-in-out infinite 2.2s;
+}
+
+/* ===== DRIFT CLASSES ===== */
+.drift1 {
+  animation: drift 8s ease-in-out infinite;
+}
+
+.drift2 {
+  animation: drift 10s ease-in-out infinite 2s;
+}
+
+.drift3 {
+  animation: drift 12s ease-in-out infinite 4s;
+}
+
+.drift4 {
+  animation: drift 9s ease-in-out infinite 1s;
+}
+
+/* ===== SPIN CLASSES ===== */
+.spinSlow {
+  animation: slowSpin 20s linear infinite;
+}
+
+.spinReverse {
+  animation: slowSpin 15s linear infinite reverse;
+}
+
+.spinMedium {
+  animation: slowSpin 25s linear infinite;
+}
+
+/* ===== HAMBURGER MENU STYLES ===== */
+/* Note: These are not used in AnimatedBackground component */
+.hamburgerMenu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.hamburgerMenu:hover {
+  background-color: rgba(31, 41, 55, 0.9);
+  transform: scale(1.05);
+}
+
+.hamburgerLines {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.hamburgerLines span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
+.hamburgerLines span:nth-child(1) {
+  top: 0;
+}
+
+.hamburgerLines span:nth-child(2) {
+  top: 8px;
+  opacity: 1;
+}
+
+.hamburgerLines span:nth-child(3) {
+  bottom: 0;
+}
+
+/* Active State - Transform to X */
+.hamburgerMenu.active .hamburgerLines span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  background-color: #ef4444;
+}
+
+.hamburgerMenu.active .hamburgerLines span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hamburgerMenu.active .hamburgerLines span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background-color: #ef4444;
+}
