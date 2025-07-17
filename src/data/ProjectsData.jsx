@@ -16,7 +16,7 @@ export const projectsData = [
       "Full stack portfolio website built with Ruby On Rails and React. It features an admin portal that allows me to quickly add, edit, and delete projects and skill.",
     tech: ["React", "RoR", "PSQL", "Heroku"],
     github: "https://github.com/jubranNassar/Portfolio",
-    site: "https://jubrannassar.com",
+    site: "https://jubrannassarv1.com",
     image:
       "/images/portfolio.png",
   },
