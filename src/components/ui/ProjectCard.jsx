@@ -33,18 +33,18 @@ const ProjectCard = ({ project }) => {
 
         <div className="flex space-x-4">
           <a
-            href={project.github}
+            href={project.github} target="_blank" rel="noopener noreferrer"
             className="flex items-center text-gray-400 hover:text-red-400 transition-colors"
           >
             <Icons.Github size={16} className="mr-2" />
             Code
           </a>
           <a
-            href={project.demo}
+            href={project.site} target="_blank" rel="noopener noreferrer"
             className="flex items-center text-gray-400 hover:text-red-400 transition-colors"
           >
             <Icons.ExternalLink size={16} className="mr-2" />
-            Demo
+            site
           </a>
         </div>
       </div>

@@ -9,7 +9,7 @@ const ProjectsSection = forwardRef(({ id }, ref) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Featured Projects"
-          subtitle="Here are some of my recent projects that showcase my skills in cloud infrastructure, DevOps, and full-stack development."
+          subtitle="Here are some of my projects that showcase my career growth and skills in cloud infrastructure, DevOps, and full-stack development."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
